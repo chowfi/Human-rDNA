@@ -25,6 +25,10 @@ samtools mpileup -f /scratch/cgsb/hochwagen/Human_rDNA_project/rDNA_prototype_pr
 
 Determine what the reference alleles are at each position where reads are aligned, including positions where no variants have been called
 
-Script for this conversion: scratch/cgsb/hochwagen/Human_rDNA_project/1000Geno/runthis_fc1132_v2.sh
+Script for this conversion & extraction: 
 
-Notebook for constructing reference genome of 1 person: Reference_Genome.ipynb
+scratch/cgsb/hochwagen/Human_rDNA_project/1000Geno/runthis_fc1132_v2.sh
+
+Notebook for constructing reference genome of 1 person: 
+
+Reference_Genome.ipynb
