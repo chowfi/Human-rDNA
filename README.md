@@ -1,6 +1,6 @@
 # Disease-Human-rRNA
 
-# Creating Reference Genome 
+## Creating Reference Genome ##
 
 **Problem:**
 
