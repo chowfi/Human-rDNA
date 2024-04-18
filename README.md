@@ -1,6 +1,6 @@
 # Disease-Human-rRNA
 
-## Creating Reference Genome of one person
+## Creating reference genome of one person
 
 ### Problem
 
