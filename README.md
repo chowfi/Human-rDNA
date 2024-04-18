@@ -1,6 +1,6 @@
 # Disease-Human-rRNA
 
-## Creating Reference Genome ##
+- [x] ## Creating Reference Genome of one person ##
 
 **Problem:**
 
@@ -21,11 +21,10 @@ CRAM files store only the differences from a reference genome to save space. To 
 Determine what the reference alleles are at each position where reads are aligned, including positions where no variants have been called.
 
 
-
 Script for this conversion & extraction: 
 
 _scratch/cgsb/hochwagen/Human_rDNA_project/1000Geno/runthis_fc1132_v2.sh_
 
-Notebook for constructing reference genome of 1 person: 
+Notebook for constructing reference genome of one person: 
 
 _Reference_Genome.ipynb_
