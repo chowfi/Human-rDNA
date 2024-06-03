@@ -1,4 +1,4 @@
-# Disease-Human-rRNA
+# Human-rDNA
 
 ## Creating reference genome of one person
 
