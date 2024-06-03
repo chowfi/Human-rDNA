@@ -18,7 +18,9 @@ def fasta_to_all_chars_dataframe(filepath):
                     data.append((position, 'sequence' if char != '>' else 'header', char))
                 position += 1
 
-    return pd.DataFrame(data, columns=['POS', 'Type', 'REF'])
+    reference_df = pd.DataFrame(data, columns=['POS', 'Type', 'REF'])
+
+    return reference_df
 
 def read_vcf(path):
     """"
@@ -34,7 +36,11 @@ def read_vcf(path):
     ).rename(columns={'#CHROM': 'CHROM'})
 
 def extract_af(info):
+    """
+    Extracting AF into a seperate column
+    """
     match = re.search(r'AF=([\d\.]+)', info)
+
     return match.group(1) if match else None
 
 def filter_df(df):
@@ -47,8 +53,17 @@ def filter_df(df):
 
     return filtered_df
 
+def merge_df(reference_df, filtered_df):
+    """
+    Merge reference allele with majority alleles
+    """
+    merged_df = reference_df.merge(filtered_df[['POS', 'ALT']], on='POS', how='left')
+    merged_df['REF'] = merged_df.apply(lambda row: row['ALT'] if pd.notnull(row['ALT']) else row['REF'], axis=1)
+    merged_df.drop('ALT', axis=1, inplace=True)
+
 
 def main():
+    
   
 
 if __name__ == "__main__":
