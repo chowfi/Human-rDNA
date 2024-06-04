@@ -29,8 +29,8 @@ POS,Type,REF
 28,sequence,T
 29,sequence,C
 30,sequence,G
-31,sequence,C
-32,sequence,T
+31,sequence,T
+32,sequence,C
 33,sequence,G
 34,sequence,G
 35,sequence,A
@@ -71,14 +71,14 @@ POS,Type,REF
 70,sequence,C
 71,sequence,C
 72,sequence,T
-73,sequence,A
-74,sequence,C
+73,sequence,C
+74,sequence,A
 75,sequence,C
 76,sequence,G
 77,sequence,G
 78,sequence,T
 79,sequence,G
-80,sequence,AC
+80,sequence,A
 81,sequence,C
 82,sequence,C
 83,sequence,G
@@ -119,7 +119,7 @@ POS,Type,REF
 118,sequence,C
 119,sequence,C
 120,sequence,G
-121,sequence,G
+121,sequence,C
 122,sequence,G
 123,sequence,G
 124,sequence,C
@@ -235,7 +235,7 @@ POS,Type,REF
 234,sequence,C
 235,sequence,G
 236,sequence,T
-237,sequence,GC
+237,sequence,G
 238,sequence,C
 239,sequence,C
 240,sequence,C
@@ -268,12 +268,12 @@ POS,Type,REF
 267,sequence,G
 268,sequence,G
 269,sequence,G
-270,sequence,CG
+270,sequence,C
 271,sequence,G
 272,sequence,C
 273,sequence,C
 274,sequence,G
-275,sequence,CG
+275,sequence,C
 276,sequence,A
 277,sequence,C
 278,sequence,A
@@ -282,7 +282,7 @@ POS,Type,REF
 281,sequence,C
 282,sequence,C
 283,sequence,C
-284,sequence,AC
+284,sequence,A
 285,sequence,C
 286,sequence,C
 287,sequence,C
@@ -361,7 +361,7 @@ POS,Type,REF
 360,sequence,G
 361,sequence,G
 362,sequence,G
-363,sequence,GT
+363,sequence,G
 364,sequence,T
 365,sequence,G
 366,sequence,G
@@ -384,7 +384,7 @@ POS,Type,REF
 383,sequence,C
 384,sequence,G
 385,sequence,C
-386,sequence,TGGCC
+386,sequence,T
 387,sequence,G
 388,sequence,G
 389,sequence,C
@@ -417,7 +417,7 @@ POS,Type,REF
 416,sequence,C
 417,sequence,T
 418,sequence,T
-419,sequence,CGT
+419,sequence,C
 420,sequence,G
 421,sequence,A
 422,sequence,T
@@ -515,14 +515,14 @@ POS,Type,REF
 514,sequence,T
 515,sequence,C
 516,sequence,C
-517,sequence,GC
+517,sequence,G
 518,sequence,C
 519,sequence,C
 520,sequence,C
 521,sequence,G
-522,sequence,CG
+522,sequence,C
 523,sequence,G
-524,sequence,G
+524,sequence,C
 525,sequence,G
 526,sequence,G
 527,sequence,T
@@ -558,8 +558,8 @@ POS,Type,REF
 557,sequence,G
 558,sequence,G
 559,sequence,C
-560,sequence,G
-561,sequence,GT
+560,sequence,C
+561,sequence,G
 562,sequence,G
 563,sequence,C
 564,sequence,G
@@ -621,10 +621,10 @@ POS,Type,REF
 620,sequence,C
 621,sequence,T
 622,sequence,T
-623,sequence,CT
+623,sequence,C
 624,sequence,G
 625,sequence,C
-626,sequence,G
+626,sequence,T
 627,sequence,T
 628,sequence,C
 629,sequence,G
@@ -671,8 +671,8 @@ POS,Type,REF
 670,sequence,C
 671,sequence,C
 672,sequence,T
-673,sequence,C
-674,sequence,G
+673,sequence,G
+674,sequence,C
 675,sequence,C
 676,sequence,T
 677,sequence,G
@@ -1675,7 +1675,7 @@ POS,Type,REF
 1674,sequence,C
 1675,sequence,C
 1676,sequence,C
-1677,sequence,T
+1677,sequence,A
 1678,sequence,C
 1679,sequence,C
 1680,sequence,C
@@ -1747,7 +1747,7 @@ POS,Type,REF
 1746,sequence,G
 1747,sequence,A
 1748,sequence,C
-1749,sequence,T
+1749,sequence,C
 1750,sequence,C
 1751,sequence,C
 1752,sequence,C
@@ -2390,7 +2390,7 @@ POS,Type,REF
 2389,sequence,C
 2390,sequence,G
 2391,sequence,C
-2392,sequence,C
+2392,sequence,G
 2393,sequence,C
 2394,sequence,C
 2395,sequence,G
@@ -2482,7 +2482,7 @@ POS,Type,REF
 2481,sequence,G
 2482,sequence,C
 2483,sequence,G
-2484,sequence,A
+2484,sequence,G
 2485,sequence,C
 2486,sequence,T
 2487,sequence,G
@@ -2551,7 +2551,7 @@ POS,Type,REF
 2550,sequence,G
 2551,sequence,C
 2552,sequence,C
-2553,sequence,G
+2553,sequence,C
 2554,sequence,C
 2555,sequence,G
 2556,sequence,C
@@ -3000,11 +3000,11 @@ POS,Type,REF
 2999,sequence,C
 3000,sequence,G
 3001,sequence,C
-3002,sequence,G
+3002,sequence,T
 3003,sequence,G
-3004,sequence,T
+3004,sequence,C
 3005,sequence,C
-3006,sequence,C
+3006,sequence,T
 3007,sequence,C
 3008,sequence,C
 3009,sequence,C
@@ -3088,7 +3088,7 @@ POS,Type,REF
 3087,sequence,G
 3088,sequence,C
 3089,sequence,C
-3090,sequence,C
+3090,sequence,G
 3091,sequence,G
 3092,sequence,C
 3093,sequence,G
@@ -3633,7 +3633,7 @@ POS,Type,REF
 3632,sequence,G
 3633,sequence,G
 3634,sequence,G
-3635,sequence,C
+3635,sequence,G
 3636,sequence,C
 3637,sequence,T
 3638,sequence,C
@@ -5678,7 +5678,7 @@ POS,Type,REF
 5677,sequence,C
 5678,sequence,G
 5679,sequence,C
-5680,sequence,CG
+5680,sequence,C
 5681,sequence,G
 5682,sequence,C
 5683,sequence,C
@@ -5690,7 +5690,7 @@ POS,Type,REF
 5689,sequence,A
 5690,sequence,G
 5691,sequence,C
-5692,sequence,CG
+5692,sequence,C
 5693,sequence,G
 5694,sequence,A
 5695,sequence,G
@@ -5837,7 +5837,7 @@ POS,Type,REF
 5836,sequence,A
 5837,sequence,C
 5838,sequence,G
-5839,sequence,G
+5839,sequence,A
 5840,sequence,C
 5841,sequence,G
 5842,sequence,T
@@ -6789,7 +6789,7 @@ POS,Type,REF
 6788,sequence,A
 6789,sequence,T
 6790,sequence,C
-6791,sequence,GC
+6791,sequence,G
 6792,sequence,C
 6793,sequence,C
 6794,sequence,C
@@ -7023,7 +7023,7 @@ POS,Type,REF
 7022,sequence,G
 7023,sequence,C
 7024,sequence,C
-7025,sequence,GCCCGC
+7025,sequence,G
 7026,sequence,G
 7027,sequence,A
 7028,sequence,A
@@ -7510,7 +7510,7 @@ POS,Type,REF
 7509,sequence,C
 7510,sequence,G
 7511,sequence,C
-7512,sequence,CCGGCCG
+7512,sequence,C
 7513,sequence,C
 7514,sequence,G
 7515,sequence,C
@@ -7659,7 +7659,7 @@ POS,Type,REF
 7658,sequence,C
 7659,sequence,G
 7660,sequence,G
-7661,sequence,G
+7661,sequence,C
 7662,sequence,G
 7663,sequence,C
 7664,sequence,G
@@ -7715,9 +7715,9 @@ POS,Type,REF
 7714,sequence,A
 7715,sequence,C
 7716,sequence,G
-7717,sequence,G
+7717,sequence,C
 7718,sequence,G
-7719,sequence,T
+7719,sequence,C
 7720,sequence,C
 7721,sequence,G
 7722,sequence,G
@@ -7992,7 +7992,7 @@ POS,Type,REF
 7991,sequence,G
 7992,sequence,G
 7993,sequence,A
-7994,sequence,G
+7994,sequence,A
 7995,sequence,A
 7996,sequence,A
 7997,sequence,G
@@ -8063,7 +8063,7 @@ POS,Type,REF
 8062,sequence,C
 8063,sequence,C
 8064,sequence,C
-8065,sequence,CGCG
+8065,sequence,C
 8066,sequence,G
 8067,sequence,C
 8068,sequence,G
@@ -8176,7 +8176,7 @@ POS,Type,REF
 8175,sequence,G
 8176,sequence,C
 8177,sequence,G
-8178,sequence,GCCC
+8178,sequence,G
 8179,sequence,C
 8180,sequence,C
 8181,sequence,G
@@ -8185,7 +8185,7 @@ POS,Type,REF
 8184,sequence,G
 8185,sequence,C
 8186,sequence,G
-8187,sequence,CCGG
+8187,sequence,C
 8188,sequence,G
 8189,sequence,C
 8190,sequence,C
@@ -8686,7 +8686,7 @@ POS,Type,REF
 8685,sequence,G
 8686,sequence,G
 8687,sequence,C
-8688,sequence,CCCGT
+8688,sequence,C
 8689,sequence,C
 8690,sequence,C
 8691,sequence,G
@@ -8802,7 +8802,7 @@ POS,Type,REF
 8801,sequence,C
 8802,sequence,G
 8803,sequence,G
-8804,sequence,C
+8804,sequence,G
 8805,sequence,G
 8806,sequence,G
 8807,sequence,C
@@ -10879,7 +10879,7 @@ POS,Type,REF
 10878,sequence,G
 10879,sequence,C
 10880,sequence,G
-10881,sequence,CCG
+10881,sequence,C
 10882,sequence,G
 10883,sequence,C
 10884,sequence,G
@@ -10929,7 +10929,7 @@ POS,Type,REF
 10928,sequence,C
 10929,sequence,C
 10930,sequence,C
-10931,sequence,AC
+10931,sequence,A
 10932,sequence,C
 10933,sequence,C
 10934,sequence,C
@@ -10957,7 +10957,7 @@ POS,Type,REF
 10956,sequence,C
 10957,sequence,C
 10958,sequence,C
-10959,sequence,G
+10959,sequence,A
 10960,sequence,C
 10961,sequence,C
 10962,sequence,C
@@ -11031,7 +11031,7 @@ POS,Type,REF
 11030,sequence,G
 11031,sequence,G
 11032,sequence,G
-11033,sequence,CG
+11033,sequence,C
 11034,sequence,G
 11035,sequence,C
 11036,sequence,G
@@ -11099,10 +11099,10 @@ POS,Type,REF
 11098,sequence,G
 11099,sequence,G
 11100,sequence,C
-11101,sequence,AC
+11101,sequence,A
 11102,sequence,G
 11103,sequence,G
-11104,sequence,TC
+11104,sequence,T
 11105,sequence,C
 11106,sequence,C
 11107,sequence,C
@@ -11124,7 +11124,7 @@ POS,Type,REF
 11123,sequence,G
 11124,sequence,G
 11125,sequence,G
-11126,sequence,C
+11126,sequence,G
 11127,sequence,A
 11128,sequence,C
 11129,sequence,C
@@ -11147,8 +11147,8 @@ POS,Type,REF
 11146,sequence,G
 11147,sequence,C
 11148,sequence,G
-11149,sequence,G
-11150,sequence,C
+11149,sequence,C
+11150,sequence,G
 11151,sequence,G
 11152,sequence,A
 11153,sequence,C
@@ -11291,7 +11291,7 @@ POS,Type,REF
 11290,sequence,G
 11291,sequence,G
 11292,sequence,G
-11293,sequence,CG
+11293,sequence,C
 11294,sequence,G
 11295,sequence,G
 11296,sequence,G
@@ -11483,7 +11483,7 @@ POS,Type,REF
 11482,sequence,G
 11483,sequence,C
 11484,sequence,G
-11485,sequence,CG
+11485,sequence,C
 11486,sequence,G
 11487,sequence,C
 11488,sequence,G
@@ -11934,7 +11934,7 @@ POS,Type,REF
 11933,sequence,T
 11934,sequence,C
 11935,sequence,C
-11936,sequence,GC
+11936,sequence,G
 11937,sequence,C
 11938,sequence,G
 11939,sequence,G
@@ -12009,7 +12009,7 @@ POS,Type,REF
 12008,sequence,C
 12009,sequence,G
 12010,sequence,A
-12011,sequence,GC
+12011,sequence,G
 12012,sequence,C
 12013,sequence,C
 12014,sequence,C
@@ -12044,8 +12044,8 @@ POS,Type,REF
 12043,sequence,C
 12044,sequence,C
 12045,sequence,C
-12046,sequence,GGCCGCGC
-12047,sequence,G
+12046,sequence,G
+12047,sequence,C
 12048,sequence,C
 12049,sequence,C
 12050,sequence,G
@@ -12386,7 +12386,7 @@ POS,Type,REF
 12385,sequence,T
 12386,sequence,T
 12387,sequence,C
-12388,sequence,A
+12388,sequence,G
 12389,sequence,C
 12390,sequence,C
 12391,sequence,A
@@ -12622,7 +12622,7 @@ POS,Type,REF
 12621,sequence,A
 12622,sequence,G
 12623,sequence,G
-12624,sequence,CG
+12624,sequence,C
 12625,sequence,G
 12626,sequence,A
 12627,sequence,A
@@ -12720,7 +12720,7 @@ POS,Type,REF
 12719,sequence,C
 12720,sequence,C
 12721,sequence,G
-12722,sequence,CGCG
+12722,sequence,C
 12723,sequence,C
 12724,sequence,G
 12725,sequence,C
@@ -12996,7 +12996,7 @@ POS,Type,REF
 12995,sequence,C
 12996,sequence,G
 12997,sequence,G
-12998,sequence,CG
+12998,sequence,C
 12999,sequence,G
 13000,sequence,G
 13001,sequence,G
@@ -13009,7 +13009,7 @@ POS,Type,REF
 13008,sequence,C
 13009,sequence,G
 13010,sequence,T
-13011,sequence,C
+13011,sequence,T
 13012,sequence,C
 13013,sequence,G
 13014,sequence,G
@@ -13066,7 +13066,7 @@ POS,Type,REF
 13065,sequence,C
 13066,sequence,C
 13067,sequence,G
-13068,sequence,CG
+13068,sequence,C
 13069,sequence,G
 13070,sequence,G
 13071,sequence,C
@@ -13077,12 +13077,12 @@ POS,Type,REF
 13076,sequence,T
 13077,sequence,G
 13078,sequence,G
-13079,sequence,TG
+13079,sequence,T
 13080,sequence,G
 13081,sequence,G
 13082,sequence,G
 13083,sequence,G
-13084,sequence,G
+13084,sequence,T
 13085,sequence,G
 13086,sequence,G
 13087,sequence,G
@@ -13111,7 +13111,7 @@ POS,Type,REF
 13110,sequence,C
 13111,sequence,G
 13112,sequence,G
-13113,sequence,CG
+13113,sequence,C
 13114,sequence,C
 13115,sequence,G
 13116,sequence,C
@@ -13148,7 +13148,7 @@ POS,Type,REF
 13147,sequence,T
 13148,sequence,T
 13149,sequence,C
-13150,sequence,AC
+13150,sequence,A
 13151,sequence,C
 13152,sequence,G
 13153,sequence,C
@@ -13217,7 +13217,7 @@ POS,Type,REF
 13216,sequence,A
 13217,sequence,G
 13218,sequence,G
-13219,sequence,CG
+13219,sequence,C
 13220,sequence,G
 13221,sequence,C
 13222,sequence,C
@@ -13276,9 +13276,9 @@ POS,Type,REF
 13275,sequence,G
 13276,sequence,C
 13277,sequence,G
-13278,sequence,GGC
+13278,sequence,G
 13279,sequence,C
-13280,sequence,C
+13280,sequence,G
 13281,sequence,C
 13282,sequence,G
 13283,sequence,G
@@ -13286,7 +13286,7 @@ POS,Type,REF
 13285,sequence,G
 13286,sequence,G
 13287,sequence,G
-13288,sequence,GC
+13288,sequence,G
 13289,sequence,G
 13290,sequence,G
 13291,sequence,C
