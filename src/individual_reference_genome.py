@@ -69,27 +69,62 @@ def main():
     # check_indv = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/reference_ERR3240115.csv' #the sample file generated from notebook for 1 individual
     # check_og = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.mpileup' #the mpileup format
 
-    individual_path = "xxx"
     # og_ref = fasta_to_all_chars_dataframe(original_reference_path)
-    og_ref = "xxx"
-    individual_df = read_vcf(individual_path)
+    # individual_df = read_vcf(individual_path)
     # check_df = pd.read_csv(check_indv)
     # check_og = pd.read_csv(check_og, sep='\t', header=None, usecols=[0, 1, 2], names=['CHROM', 'POS', 'REF'])
     
-    filtered_df = filter_df(individual_df)
-    merged_df = merge_df(og_ref, filtered_df)
+    # filtered_df = filter_df(individual_df)
+    # merged_df = merge_df(og_ref, filtered_df)
 
     # assert check_df['POS'].equals(merged_df['POS']) and check_df['REF'].equals(merged_df['REF'])
     # assert check_og['POS'].equals(og_ref['POS']) and check_og['REF'].equals(og_ref['REF'])
 
-    file_split = individual_path.split('/')
-    id_value = file_split[-2]
+    # file_split = individual_path.split('/')
+    # id_value = file_split[-2]
     # os.chdir('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs')
-    os.chdir('xxx')
     # og_ref.to_csv('og_ref.csv', index=False)
-    merged_df.to_csv(f'reference_{id_value}.csv', index=False)
+    # merged_df.to_csv(f'reference_{id_value}.csv', index=False)
 
-    print(f'{id_value} reference saved.')
-    
+    # print(f'{id_value} reference saved.')
+
+    file_path = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/scripts_outputs/unique_array_jobs_vcf_files.txt"
+    og_ref = pd.read_csv('/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/og_ref.csv')
+
+    success_ids = []
+    failed_ids = []
+
+    with open(file_path, 'r') as file:
+        for individual_path in file:
+
+            individual_path = individual_path.strip()  
+            try:
+                individual_df = read_vcf(individual_path)
+                
+                filtered_df = filter_df(individual_df)
+                merged_df = merge_df(og_ref, filtered_df)
+
+                file_split = individual_path.split('/')
+                id_value = file_split[-2]  
+                
+                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/'
+                os.chdir(output_dir)
+
+                merged_df.to_csv(f'reference_{id_value}.csv', index=False)
+                success_ids.append(id_value)
+            except Exception as e:
+                print(f'Failed to process {id_value}: {str(e)}')
+                failed_ids.append(id_value)
+
+    with open('successful_ids.txt', 'w') as f:
+        for id in success_ids:
+            f.write(f'{id}\n')
+
+    with open('failed_ids.txt', 'w') as f:
+        for id in failed_ids:
+            f.write(f'{id}\n')
+
+    print(f'Processing complete. Check successful_ids.txt and failed_ids.txt for details.')
+        
 if __name__ == "__main__":
     main()
