@@ -1,2 +1,5 @@
 head -n 3 high_coverage_ids.csv | cat -vet #check for invisible characters
-sed -i '' 's/\r$//' high_coverage_ids.csv #removes carriage return characters
+sed -i '' 's/\r$//' high_coverage_ids.csv #removes carriage return character
+grep 'array_jobs' vcf_files.txt | grep -o 'ERR[0-9]*' | sort -u | wc -l #count unique ids in array_jobs folders
+grep -E '/array_jobs/' vcf_files.txt | grep -o 'ERR[0-9]*' | sort | uniq -cd | awk '$1 > 2 {sum += $1} END {print sum} #sum duplicates in 'array_jobs' only directories'
+
