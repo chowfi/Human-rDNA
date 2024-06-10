@@ -64,26 +64,29 @@ def merge_df(reference_df, filtered_df):
     return merged_df
 
 def main():
-    original_reference_path = '/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/original reference/rDNA_prototype_prerRNA_only.fa'
-    individual_path = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.vcf'
-    check_indv = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/reference_ERR3240115.csv' #the sample file generated from notebook for 1 individual
-    check_og = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.mpileup' #the mpileup format
+    # original_reference_path = '/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/original reference/rDNA_prototype_prerRNA_only.fa'
+    # individual_path = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.vcf'
+    # check_indv = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/reference_ERR3240115.csv' #the sample file generated from notebook for 1 individual
+    # check_og = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.mpileup' #the mpileup format
 
-    og_ref = fasta_to_all_chars_dataframe(original_reference_path)
+    individual_path = "xxx"
+    # og_ref = fasta_to_all_chars_dataframe(original_reference_path)
+    og_ref = "xxx"
     individual_df = read_vcf(individual_path)
-    check_df = pd.read_csv(check_indv)
-    check_og = pd.read_csv(check_og, sep='\t', header=None, usecols=[0, 1, 2], names=['CHROM', 'POS', 'REF'])
+    # check_df = pd.read_csv(check_indv)
+    # check_og = pd.read_csv(check_og, sep='\t', header=None, usecols=[0, 1, 2], names=['CHROM', 'POS', 'REF'])
     
     filtered_df = filter_df(individual_df)
     merged_df = merge_df(og_ref, filtered_df)
 
-    assert check_df['POS'].equals(merged_df['POS']) and check_df['REF'].equals(merged_df['REF'])
-    assert check_og['POS'].equals(og_ref['POS']) and check_og['REF'].equals(og_ref['REF'])
+    # assert check_df['POS'].equals(merged_df['POS']) and check_df['REF'].equals(merged_df['REF'])
+    # assert check_og['POS'].equals(og_ref['POS']) and check_og['REF'].equals(og_ref['REF'])
 
     file_split = individual_path.split('/')
     id_value = file_split[-2]
-    os.chdir('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs')
-    og_ref.to_csv('og_ref.csv', index=False)
+    # os.chdir('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs')
+    os.chdir('xxx')
+    # og_ref.to_csv('og_ref.csv', index=False)
     merged_df.to_csv(f'reference_{id_value}.csv', index=False)
 
     print(f'{id_value} reference saved.')
