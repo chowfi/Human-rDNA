@@ -1,0 +1,2 @@
+head -n 3 high_coverage_ids.csv | cat -vet #check for invisible characters
+sed -i '' 's/\r$//' high_coverage_ids.csv #removes carriage return characters
