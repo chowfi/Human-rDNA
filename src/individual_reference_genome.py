@@ -84,7 +84,7 @@ def deletion_df(filtered_df):
     Create deletion table with position and base to delete
     """
     # deletion instances that matter
-    temp_deletion = filtered_df[(filtered_df['REF'].str.len()) > (filtered_df['ALT'].str.len())] 
+    temp_deletion = filtered_df[(filtered_df['REF'].str.len()) > (filtered_df['ALT'].str.len())].copy() 
     # Applying the function to each row
     temp_deletion['Deletions'] = temp_deletion.apply(find_deletions, axis=1)
     # Exploding the list to have each deletion in a separate row
