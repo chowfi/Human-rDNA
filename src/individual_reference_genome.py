@@ -63,6 +63,58 @@ def merge_df(reference_df, filtered_df):
 
     return merged_df
 
+def find_deletions(row):
+    """ 
+    Determines deletions
+    """
+    pos = row['POS']
+    ref = row['REF']
+    alt = row['ALT']
+    deletions = []
+    start_deletion = pos + len(alt)
+    # Subtract the ALT length from REF to determine the deletions
+    extra_bases = ref[len(alt):]
+    for i, base in enumerate(extra_bases, start=start_deletion):
+        deletions.append((i, base))
+        
+    return deletions
+
+def deletion_df(filtered_df):
+    """
+    Create deletion table with position and base to delete
+    """
+    # deletion instances that matter
+    temp_deletion = filtered_df[(filtered_df['REF'].str.len()) > (filtered_df['ALT'].str.len())] 
+    # Applying the function to each row
+    temp_deletion['Deletions'] = temp_deletion.apply(find_deletions, axis=1)
+    # Exploding the list to have each deletion in a separate row
+    deletions_expanded = temp_deletion.explode('Deletions')
+    deletions_expanded[['Delete_Position', 'Base']] = pd.DataFrame(deletions_expanded['Deletions'].tolist(), index=deletions_expanded.index)
+
+    return deletions_expanded
+
+def replace_ref(row):
+    """
+    Replace base with 0 for positions with deletions
+    """
+    if  row['REF_x'] == row['Base']:
+        return 0
+    else:
+        return row['REF_x']
+    
+def merge_df2(merged_df, deletions_expanded):
+    """
+    Merge df that has handled insertions with df that has deletion information
+    """
+    # Merge on the position columns, ensuring that deletions_expanded aligns with merged_df
+    merged_df = pd.merge(merged_df, deletions_expanded, left_on='POS', right_on='Delete_Position', how='left')
+    merged_df['REF_x'] = merged_df.apply(replace_ref, axis=1)
+    merged_df.drop(['ALT','CHROM','POS_y', 'ID', 'REF_y', 'QUAL', 'FILTER', 'INFO', 'AF', 'Deletions', 'Delete_Position', 'Base'] , axis=1, inplace=True)
+    merged_df.rename(columns={'POS_x':'POS', 'REF_x':'REF'}, inplace=True)
+
+    return merged_df
+
+
 def main():
     # original_reference_path = '/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/original reference/rDNA_prototype_prerRNA_only.fa'
     # individual_path = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.vcf'
@@ -103,11 +155,13 @@ def main():
                 
                 filtered_df = filter_df(individual_df)
                 merged_df = merge_df(og_ref, filtered_df)
+                deletions_expanded = deletion_df(filtered_df)
+                merged_df = merge_df2(merged_df, deletions_expanded)
 
                 file_split = individual_path.split('/')
                 id_value = file_split[-2]  
                 
-                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/'
+                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v2_indels/'
                 os.chdir(output_dir)
 
                 merged_df.to_csv(f'reference_{id_value}.csv', index=False)
