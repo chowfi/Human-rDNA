@@ -24,7 +24,7 @@ def update_dfs(merged_df):
     1) Get full sequence of individual
     2) Get ALT_new and AF_new if there is a different base reference at each position
     """
-    # Combine the ALT_og column and ALT_vcf into ALT_combined, and set AF to 0 where variant did not exist
+    #Combine the ALT_og column and ALT_vcf into ALT_combined, and set AF to 0 where variant did not exist
     merged_df['ALT_combined'] = merged_df.apply(lambda x: x['ALT_vcf'] if pd.notna(x['ALT_vcf']) else x['ALT_og'], axis=1)
     merged_df['AF'] = merged_df['AF'].fillna(0) 
     merged_df.drop(columns=['ALT_vcf','Type'], inplace=True)
@@ -87,16 +87,18 @@ def deletions_insertions(merged_df, individual_df):
     duplicate_rows = duplicate_rows[['POS','Duplicate']]
     unique_rows = duplicate_rows.drop_duplicates()
 
-    # if insertion w duplicate rows in original vcf, and new_ref != ALT_old, then make ALT_new = ALT_old
-    # Motivation: otherwise there would be two identical rows but w different AF which would not make sense
+    #if insertion w duplicate rows in original vcf, and new_ref != ALT_old, then make ALT_new = ALT_old
+    #Motivation: otherwise there would be two identical rows but w different AF which would not make sense
     merged_updated_df = pd.merge(merged_updated_df, unique_rows, on='POS', how='left')
     #if Duplicate is not missing and new_ref != ALT_old
     merged_updated_df['ALT_new'] = merged_updated_df.apply(lambda x: x['ALT_old'] if pd.notna(x['Duplicate']) and x['new_ref']!=x['ALT_old'] else x['ALT_new'] , axis=1)
     merged_updated_df['AF_new'] = merged_updated_df.apply(lambda x: x['AF_old'] if pd.notna(x['Duplicate']) and x['new_ref']!=x['ALT_old'] else x['AF_new'] , axis=1)
 
+    merged_updated_df.drop(columns=['scenario','AF', 'inv_AF'], inplace=True)
+
     return merged_updated_df
 
-def snp_df(merged_updated_df):
+def get_snp_df(merged_updated_df):
     """
     Isolate SNPs only
     """
@@ -154,6 +156,20 @@ def main():
             f.write(f'{id}\n')
 
     print(f'Processing complete. Check successful_ids.txt and failed_ids.txt for details.')
-        
+
+    # og_ref = pd.read_csv('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/og_ref.csv')
+    # new_ref = new_ref = pd.read_csv('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/1000_genome_new_ref/1000_genome_new_ref_v2.csv')
+    # individual_path = '/Users/fionachow/Documents/NYU/CDS/Spring 2024/Research Fair/Hochwagen/Individual Data/ERR3240115/ERR3240115_rDNA.vcf'
+    # snp_check = pd.read_csv('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/notebooks/snp_df_test.csv')
+
+    # individual_df = read_vcf(individual_path)
+    # merged_df = merge_dfs(og_ref, individual_df, new_ref)
+    # merged_df = update_dfs(merged_df)
+    # merged_updated_df = deletions_insertions(merged_df, individual_df)
+    # snp_df = get_snp_df(merged_updated_df)
+
+    # assert snp_check['POS'].equals(snp_df['POS']) and snp_check['new_ref'].equals(snp_df['new_ref']) and snp_check['ALT_new'].equals(snp_df['ALT_new']) and snp_check['AF_new'].equals(snp_df['AF_new'])
+
+    
 if __name__ == "__main__":
     main()
