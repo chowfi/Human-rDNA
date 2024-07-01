@@ -1,6 +1,7 @@
 
 import pandas as pd
 import sys
+import os
 sys.path.append('/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/src/')
 from individual_reference_genome import *
 
@@ -124,10 +125,22 @@ def main():
     success_ids = []
     failed_ids = []
 
+    output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/new_vcf'
+    os.makedirs(output_dir, exist_ok=True)
+
     with open(file_path, 'r') as file:
         for individual_path in file:
 
             individual_path = individual_path.strip()  
+            file_split = individual_path.split('/')
+            id_value = file_split[-2]  
+            output_file_path = os.path.join(output_dir, f'new_vcf_{id_value}.csv')
+
+            if os.path.exists(output_file_path):
+                print(f'{output_file_path} already exists, skipping...')
+                success_ids.append(id_value)
+                continue
+
             try:
                 individual_df = read_vcf(individual_path)
                 merged_df = merge_dfs(og_ref, individual_df, new_ref)
@@ -135,13 +148,7 @@ def main():
                 merged_updated_df = deletions_insertions(merged_df, individual_df)
                 snp_df = get_snp_df(merged_updated_df)
 
-                file_split = individual_path.split('/')
-                id_value = file_split[-2]  
-                
-                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/new_vcf'
-                os.chdir(output_dir)
-
-                snp_df.to_csv(f'new_vcf_{id_value}.csv', index=False)
+                snp_df.to_csv(output_file_path, index=False)
                 success_ids.append(id_value)
             except Exception as e:
                 print(f'Failed to process {id_value}: {str(e)}')
