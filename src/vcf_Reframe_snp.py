@@ -117,7 +117,7 @@ def get_snp_df(merged_updated_df):
     return snp_df
 
 def main():
-    file_path = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/scripts_outputs/unique_array_jobs_vcf_files.txt"
+    file_path = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/scripts_outputs/unique_array_jobs_vcf_files_v1.txt"
     og_ref = pd.read_csv('/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/og_ref.csv')
     new_ref = pd.read_csv('/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/1000_genome_new_ref/1000_genome_new_ref_v2.csv')
 
