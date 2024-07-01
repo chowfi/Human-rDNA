@@ -133,7 +133,7 @@ def main():
                 merged_df = merge_dfs(og_ref, individual_df, new_ref)
                 merged_df = update_dfs(merged_df)
                 merged_updated_df = deletions_insertions(merged_df, individual_df)
-                snp_df = snp_df(merged_updated_df)
+                snp_df = get_snp_df(merged_updated_df)
 
                 file_split = individual_path.split('/')
                 id_value = file_split[-2]  
