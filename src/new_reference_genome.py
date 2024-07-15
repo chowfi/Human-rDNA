@@ -46,7 +46,7 @@ def merge_csv_files(directory):
 
 def main():
     
-    directory = "/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v3_all"
+    directory = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v3_all/"
 
     combined_df = merge_csv_files(directory)
 
