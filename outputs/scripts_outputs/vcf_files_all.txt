@@ -200,7 +200,6 @@
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3242993/ERR3242993_rDNA.vcf
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3241727/ERR3241727_rDNA.vcf
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3989453/ERR3989453_rDNA.vcf
-/scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3239488/ERR3239488_rDNA.vcf
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3241779/ERR3241779_rDNA.vcf
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3989211/ERR3989211_rDNA.vcf
 /scratch/cgsb/hochwagen/Human_rDNA_project/data/1GP/ERR3239802/ERR3239802_rDNA.vcf
