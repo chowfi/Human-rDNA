@@ -46,7 +46,7 @@ def merge_csv_files(directory):
 
 def main():
     
-    directory = "/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v2_indels"
+    directory = "/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v3_all"
 
     combined_df = merge_csv_files(directory)
 
@@ -58,7 +58,7 @@ def main():
 
     most_common_patterns = combined_df[['POS', '1000_genome_new_ref']]
 
-    most_common_patterns.to_csv("1000_genome_new_ref_v2.csv")
+    most_common_patterns.to_csv("1000_genome_new_ref_v3.csv")
 
 
 if __name__ == "__main__":
