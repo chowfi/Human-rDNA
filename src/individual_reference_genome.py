@@ -140,7 +140,7 @@ def main():
 
     # print(f'{id_value} reference saved.')
 
-    file_path = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/scripts_outputs/unique_array_jobs_vcf_files.txt"
+    file_path = "/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/scripts_outputs/vcf_files_all.txt"
     og_ref = pd.read_csv('/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/og_ref.csv')
 
     success_ids = []
@@ -161,7 +161,7 @@ def main():
                 file_split = individual_path.split('/')
                 id_value = file_split[-2]  
                 
-                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v2_indels/'
+                output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/indiv_ref_genome/v3_all/'
                 os.chdir(output_dir)
 
                 merged_df.to_csv(f'reference_{id_value}.csv', index=False)
