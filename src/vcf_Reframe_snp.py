@@ -125,7 +125,7 @@ def main():
     success_ids = []
     failed_ids = []
 
-    output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/new_vcf'
+    output_dir = '/scratch/cgsb/hochwagen/Human_rDNA_project/Human-rDNA/outputs/src_outputs/new_vcf/full_set/'
     os.makedirs(output_dir, exist_ok=True)
 
     with open(file_path, 'r') as file:
