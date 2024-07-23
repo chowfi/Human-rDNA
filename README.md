@@ -1,5 +1,7 @@
 # Human-rDNA
 
+Weekly Updates here: https://docs.google.com/presentation/d/1OQmLHz-VFHUhOgELqBhIQRyfAfHbC0luyfAHhpZx_OY/edit?usp=sharing
+
 ## Creating reference genome of one person
 
 ### Problem
