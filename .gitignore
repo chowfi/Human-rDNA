@@ -7,3 +7,4 @@ outputs/src_outputs/indiv_ref_genome/v2_indels/
 outputs/src_outputs/indiv_ref_genome/v3_all/
 outputs/src_outputs/new_vcf/subset/
 outputs/src_outputs/indels_stats/
+notebooks/fullanalysis_version2.ipynb
