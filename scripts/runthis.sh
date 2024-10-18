@@ -2,8 +2,8 @@
 
 USER="fc1132"
 HPC_HOST="greene.hpc.nyu.edu"
-TXT_FILE="/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/scripts_outputs/vcf_files_all.txt"
-LOCAL_DIR="/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/original reference/original_vcf_all"
+TXT_FILE="/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/scripts_outputs/coverage_files_all.txt"
+LOCAL_DIR="/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/original reference/original_coverage_all"
 
 # Check if the TXT_FILE exists
 if [ ! -f $TXT_FILE ]; then
