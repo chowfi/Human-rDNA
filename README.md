@@ -1,6 +1,7 @@
 # Human-rDNA
 
 Weekly Updates here: https://docs.google.com/presentation/d/1OQmLHz-VFHUhOgELqBhIQRyfAfHbC0luyfAHhpZx_OY/edit?usp=sharing
+9/27 Lab Presentation: https://docs.google.com/presentation/d/1dDxmGy5-T72uO3BKXMyuPYrsKZXvIXdaurrm5zPUgp8/
 
 ## Creating reference genome of one person
 
