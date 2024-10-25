@@ -43,3 +43,19 @@ Notebook for constructing reference genome of one person:
 ```
 Reference_Genome.ipynb
 ```
+
+## Estimating copy number of Human rDNA (multi-copy genes)
+
+### Problem
+
+Current Allele Frequency(AF) in Variant Calling Files(VCF) confound coverage and copies
+
+### Solution
+
+Step 1: Calculate Genome Coverage Ratio: Divide the number of base pairs per sample by the total base pairs in the hg38 reference genome (3 billion).
+
+Step 2: Determine Average rDNA Coverage: Compute the average rDNA coverage for each sample
+
+Step 3: Compute estimated copy number: Divide the genome coverage ratio per sample by the average rDNA coverage per sample
+
+Step 4: Normalize AF with estimated copy number for each sample
