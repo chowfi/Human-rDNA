@@ -1,0 +1,35 @@
+import pandas as pd
+import os
+import glob
+
+full_set_path = '/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/src_outputs/new_vcf/full_set'
+filtered_pop_path = '/Users/fionachow/Documents/NYU/CDS/Summer 2024/Human rDNA Research/Project/Human-rDNA/outputs/others/1000data - Filtered Pop.csv'
+
+copy_number_df = pd.read_csv(filtered_pop_path)
+copy_number_dict = dict(zip(copy_number_df['Run'], copy_number_df['Estimated Copy #']))
+
+skipped_files = []
+
+for file_path in glob.glob(os.path.join(full_set_path, 'new_vcf_ERR*.csv')):
+
+    file_name = os.path.basename(file_path)
+    run_key = file_name.split('_')[2].split('.')[0]
+
+    if run_key in copy_number_dict:
+        estimated_copy_number = copy_number_dict[run_key]
+
+        df = pd.read_csv(file_path)
+
+        df['estimated copy number'] = estimated_copy_number
+
+        df['normalized AF'] = df['AF_new'] / estimated_copy_number
+
+        df.to_csv(file_path, index=False)
+    else:
+        skipped_files.append(run_key)
+
+if skipped_files:
+    skipped_df = pd.DataFrame(skipped_files, columns=['Run'])
+    skipped_df.to_csv(os.path.join(full_set_path, 'skipped_files.csv'), index=False)
+
+print("Process completed. Skipped files saved to 'skipped_files.csv' if any.")
