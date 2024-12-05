@@ -4,7 +4,7 @@ Weekly Updates here: https://docs.google.com/presentation/d/1OQmLHz-VFHUhOgELqBh
 
 9/27 Lab Presentation: https://docs.google.com/presentation/d/1dDxmGy5-T72uO3BKXMyuPYrsKZXvIXdaurrm5zPUgp8/
 
-12/6 Lab Presentation: 
+12/6 Lab Presentation: https://docs.google.com/presentation/d/1idvryGLZLbnQQSU7JAj0ja7BHKmGhua1WioTAWPUgWw/edit#slide=id.g305de4a1881_0_135
 
 ## Creating reference genome of one person
 
