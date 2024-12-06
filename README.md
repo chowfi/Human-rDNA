@@ -58,6 +58,4 @@ Step 1: Calculate Genome Coverage Ratio: Divide the number of base pairs per sam
 
 Step 2: Determine Average rDNA Coverage: Compute the average rDNA coverage for each sample
 
-Step 3: Compute estimated copy number: Divide the genome coverage ratio per sample by the average rDNA coverage per sample
-
-Step 4: Normalize AF with estimated copy number for each sample
+Step 3: Compute estimated copy number: Divide the average rDNA coverage per sample by the genome coverage ratio per sample 
