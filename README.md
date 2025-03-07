@@ -4,6 +4,8 @@ Weekly Updates here: https://docs.google.com/presentation/d/1OQmLHz-VFHUhOgELqBh
 
 9/27 Lab Presentation: https://docs.google.com/presentation/d/1dDxmGy5-T72uO3BKXMyuPYrsKZXvIXdaurrm5zPUgp8/
 
+12/6 Lab Presentation: https://docs.google.com/presentation/d/1idvryGLZLbnQQSU7JAj0ja7BHKmGhua1WioTAWPUgWw/edit#slide=id.g305de4a1881_0_135
+
 ## Creating reference genome of one person
 
 ### Problem
@@ -56,6 +58,4 @@ Step 1: Calculate Genome Coverage Ratio: Divide the number of base pairs per sam
 
 Step 2: Determine Average rDNA Coverage: Compute the average rDNA coverage for each sample
 
-Step 3: Compute estimated copy number: Divide the genome coverage ratio per sample by the average rDNA coverage per sample
-
-Step 4: Normalize AF with estimated copy number for each sample
+Step 3: Compute estimated copy number: Divide the average rDNA coverage per sample by the genome coverage ratio per sample 
