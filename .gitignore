@@ -1,4 +1,5 @@
 original reference/original_vcf/
+original reference/original_vcf_bad/
 original reference/original_vcf_all/
 *.DS_Store
 notebooks/1000_vcf_analysis-Copy1.ipynb
